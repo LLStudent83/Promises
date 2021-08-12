@@ -7,10 +7,3 @@ export default class GameSavingLoader {
     return promiseRead.then((data) => json(data));
   }
 }
-
-GameSavingLoader.load().then((saving) => {
-  console.log(saving);
-});
-
-// console.log(GameSavingLoader.load());
-// GameSavingLoader.load();
