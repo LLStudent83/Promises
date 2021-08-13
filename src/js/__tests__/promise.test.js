@@ -1,5 +1,11 @@
 import GameSavingLoader from '../gameSavingLoader';
 
 test('checking return promise', () => GameSavingLoader.load().then((data) => {
-  expect(data).toBe('{"id":9,"created":1546300800,"userInfo":{"id":1,name":"Hitman","level":10,"points":2000}}');
+  expect(data).toEqual({
+    created: 1546300800,
+    id: 9,
+    userInfo: {
+      id: 1, level: 10, name: 'Hitman', points: 2000,
+    },
+  });
 }));
